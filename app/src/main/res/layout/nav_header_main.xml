@@ -1,0 +1,35 @@
+<!-- res/layout/nav_header_main.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:background="@color/white">
+
+    <!-- Your profile picture or icon -->
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/panda_yorke"/>
+
+    <ImageView
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/shadoweffect"/>
+
+
+    <!-- User name or other information -->
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PandaYorke"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/poppins_medium"
+
+        />
+</RelativeLayout>
