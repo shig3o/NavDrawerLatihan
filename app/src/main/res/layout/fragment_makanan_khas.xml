@@ -117,7 +117,7 @@
                         android:fontFamily="@font/poppins_bold"
                         android:textColor="@color/white"
                         android:layout_marginBottom="-10dp"
-                        >
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -171,7 +171,7 @@
                         android:fontFamily="@font/poppins_bold"
                         android:textColor="@color/white"
                         android:layout_marginBottom="-10dp"
-                        >
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -225,7 +225,7 @@
                         android:fontFamily="@font/poppins_bold"
                         android:textColor="@color/white"
                         android:layout_marginBottom="-10dp"
-                        >
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -279,7 +279,7 @@
                         android:fontFamily="@font/poppins_bold"
                         android:textColor="@color/white"
                         android:layout_marginBottom="-10dp"
-                        >
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
