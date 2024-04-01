@@ -31,6 +31,7 @@ public class Informasi extends AppCompatActivity {
         String nama = intent.getStringExtra("nama");
         String informasi = intent.getStringExtra("informasi");
         int imageResourceId = intent.getIntExtra("image", -1); // Assuming image is an int resource ID
+        String fragmentName = intent.getStringExtra("fragment");
 
         // Set the data to the views
         namaTextView.setText(nama);
@@ -41,6 +42,7 @@ public class Informasi extends AppCompatActivity {
 
         back.setOnClickListener(v -> {
             Intent intentA = new Intent(Informasi.this, MainActivity.class);
+            intentA.putExtra("fragment", fragmentName);
             startActivity(intentA);
         });
     }

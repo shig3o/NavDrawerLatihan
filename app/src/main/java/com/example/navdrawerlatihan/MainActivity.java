@@ -8,22 +8,31 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
+import com.example.navdrawerlatihan.fragments.MakananFavoritFragment;
 import com.example.navdrawerlatihan.fragments.MakananKhasFragment;
 import com.example.navdrawerlatihan.fragments.MinumanKhasFragment;
 import com.google.android.material.navigation.NavigationView;
+import com.example.navdrawerlatihan.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        String fragmentName = getIntent().getStringExtra("fragment");
+        Fragment fragment = null;
 
         showHomePage();
 
@@ -35,6 +44,22 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
+        // Use if-else statements to handle different fragment names
+        if ("minumanKhas".equals(fragmentName)) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame, new MinumanKhasFragment())
+                    .commit();
+            getSupportActionBar().setTitle("Minuman Khas");
+        } else if ("makananFavorit".equals(fragmentName)) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame, new MakananFavoritFragment())
+                    .commit();
+            getSupportActionBar().setTitle("Makanan Favorit");
+        } else {
+            // Default case if no matching fragment name is found
+            showHomePage();
+        }
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -43,11 +68,16 @@ public class MainActivity extends AppCompatActivity {
 
                 if (itemId == R.id.menu_item1) {
                     showHomePage();
-                } else {
+                } else if (itemId == R.id.menu_item2) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, new MinumanKhasFragment())
                             .commit();
-                    getSupportActionBar().setTitle("Profile Page");
+                    getSupportActionBar().setTitle("Minuman Khas");
+                } else if (itemId == R.id.menu_item3) {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_frame, new MakananFavoritFragment())
+                            .commit();
+                    getSupportActionBar().setTitle("Makanan Favorit");
                 }
 
                 drawerLayout.closeDrawers();
@@ -67,7 +97,8 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.content_frame, new MakananKhasFragment())
                 .commit();
 
-        getSupportActionBar().setTitle("Home Page");
+        getSupportActionBar().setTitle("Makanan Khas");
     }
+
 
 }

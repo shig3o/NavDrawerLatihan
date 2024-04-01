@@ -14,4 +14,9 @@
         <item name="colorControlNormal">#303030</item>
         <item name="colorControlActivated">@color/white</item>
     </style>
+
+    <style name="RobotoBoldTextAppearance">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name ="android:textSize">24sp</item>
+    </style>
 </resources>

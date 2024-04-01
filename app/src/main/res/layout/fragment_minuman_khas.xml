@@ -2,15 +2,145 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#181B20">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ini profile"
-        android:textSize="18sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <!-- Add more UI elements as needed -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gridbg"/>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:rowCount="1"
+            android:columnCount="2"
+            android:layout_marginBottom="5dp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/teh_talua"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="15dp"
+                app:cardBackgroundColor="#292424"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_margin="15dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/teh_talua"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/shadoweffect"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:paddingTop="150dp"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Teh Talua"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="-10dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="gatau gapernah nyoba"
+
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/white"
+
+                        />
+
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ampiang_dadiah"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="15dp"
+                app:cardBackgroundColor="#292424"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_margin="15dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ampiang_dadiah"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/shadoweffect"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:paddingTop="120dp"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ampiang Dadiah"
+                        android:textSize="24sp"
+                        android:lineHeight="30dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="-10dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="gatau gapernah nyoba"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/white"
+
+                        />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </GridLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>
