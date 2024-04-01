@@ -110,10 +110,11 @@
                     android:paddingLeft="10dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:text="Sate\nPadang"
+                        android:text="Sate Padang"
                         android:textSize="24sp"
+                        android:lineHeight="25dp"
                         android:fontFamily="@font/poppins_bold"
                         android:textColor="@color/white"
                         android:layout_marginBottom="-10dp"
@@ -164,10 +165,11 @@
                     android:paddingLeft="10dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:text="Dendeng Balado"
                         android:textSize="24sp"
+                        android:lineHeight="30dp"
                         android:fontFamily="@font/poppins_bold"
                         android:textColor="@color/white"
                         android:layout_marginBottom="-10dp"
@@ -272,10 +274,11 @@
                     android:paddingLeft="10dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:text="Nasi\nPadang"
+                        android:text="Nasi Padang"
                         android:textSize="24sp"
+                        android:lineHeight="30dp"
                         android:fontFamily="@font/poppins_bold"
                         android:textColor="@color/white"
                         android:layout_marginBottom="-10dp"
@@ -283,7 +286,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Padang"
+                        android:text="Lumayan enak lah"
                         android:textSize="12sp"
                         android:fontFamily="@font/poppins_regular"
                         android:textColor="@color/white"

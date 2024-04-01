@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.navdrawerlatihan.fragments.MakananFavoritFragment;
 import com.example.navdrawerlatihan.fragments.MakananKhasFragment;
 import com.example.navdrawerlatihan.fragments.MinumanKhasFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -43,11 +44,16 @@ public class MainActivity extends AppCompatActivity {
 
                 if (itemId == R.id.menu_item1) {
                     showHomePage();
-                } else {
+                } else if (itemId == R.id.menu_item2) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, new MinumanKhasFragment())
                             .commit();
-                    getSupportActionBar().setTitle("Profile Page");
+                    getSupportActionBar().setTitle("Minuman Khas");
+                } else if (itemId == R.id.menu_item3) {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_frame, new MakananFavoritFragment())
+                            .commit();
+                    getSupportActionBar().setTitle("Makanan Favorit");
                 }
 
                 drawerLayout.closeDrawers();
@@ -67,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.content_frame, new MakananKhasFragment())
                 .commit();
 
-        getSupportActionBar().setTitle("Home Page");
+        getSupportActionBar().setTitle("Makanan Khas");
     }
 
 }
