@@ -31,9 +31,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String fragmentName = getIntent().getStringExtra("fragment");
-        Fragment fragment = null;
-
         showHomePage();
 
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -45,20 +42,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
         // Use if-else statements to handle different fragment names
-        if ("minumanKhas".equals(fragmentName)) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, new MinumanKhasFragment())
-                    .commit();
-            getSupportActionBar().setTitle("Minuman Khas");
-        } else if ("makananFavorit".equals(fragmentName)) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, new MakananFavoritFragment())
-                    .commit();
-            getSupportActionBar().setTitle("Makanan Favorit");
-        } else {
-            // Default case if no matching fragment name is found
-            showHomePage();
-        }
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

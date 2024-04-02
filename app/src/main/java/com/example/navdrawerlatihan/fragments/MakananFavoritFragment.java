@@ -43,7 +43,6 @@ public class MakananFavoritFragment extends Fragment {
             intent.putExtra("nama", ramenInfo.getNama());
             intent.putExtra("informasi", ramenInfo.getInformasi());
             intent.putExtra("image", ramenInfo.getImage());
-            intent.putExtra("fragment", "makananFavorit");
             startActivity(intent);
         });
 
@@ -52,7 +51,6 @@ public class MakananFavoritFragment extends Fragment {
             intent.putExtra("nama", ayamInfo.getNama());
             intent.putExtra("informasi", ayamInfo.getInformasi());
             intent.putExtra("image", ayamInfo.getImage());
-            intent.putExtra("fragment", "makananFavorit");
             startActivity(intent);
         });
 

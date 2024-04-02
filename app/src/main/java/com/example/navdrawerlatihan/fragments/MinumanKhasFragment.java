@@ -37,7 +37,6 @@ public class MinumanKhasFragment extends Fragment {
             intent.putExtra("nama", tehInfo.getNama());
             intent.putExtra("informasi", tehInfo.getInformasi());
             intent.putExtra("image", tehInfo.getImage());
-            intent.putExtra("fragment", "minumanKhas");
             startActivity(intent);
         });
 
@@ -46,7 +45,6 @@ public class MinumanKhasFragment extends Fragment {
             intent.putExtra("nama", ampiangInfo.getNama());
             intent.putExtra("informasi", ampiangInfo.getInformasi());
             intent.putExtra("image", ampiangInfo.getImage());
-            intent.putExtra("fragment", "minumanKhas");
             startActivity(intent);
         });
 
